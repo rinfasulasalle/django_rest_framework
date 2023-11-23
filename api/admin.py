@@ -8,7 +8,23 @@ from .models import (
     CuentaBancaria,
     Direccion,
     Estudio,
-    # Asegúrate de importar otros modelos si los tienes
+    DropdownRoles,
+    DropdownRolProyecto,
+    DropdownAreas,
+    DropdownTipoContrato,
+    DropdownContratoOpcion,
+    DropdownEmpleoTipo,
+    DropdownEmpleoSituacion,
+    DropdownProyecto,
+    DropdownNivelEducativo,
+    DropdownSituacionesEspeciales,
+    DropdownRegimenLaboral,
+    DropdownRegimenAseguramiento,
+    DropdownInstituciones,
+    DropdownCarreras,
+    DropdownCapacitaciones,
+    DropdownEspecializaciones,
+    DropdownSedes,
 )
 
 admin.site.register(Usuario)
@@ -18,4 +34,22 @@ admin.site.register(Contrato)
 admin.site.register(CuentaBancaria)
 admin.site.register(Direccion)
 admin.site.register(Estudio)
-# Registra otros modelos si los tienes
+
+# Registra los modelos de "dropdowns"
+admin.site.register(DropdownRoles)
+admin.site.register(DropdownRolProyecto)
+admin.site.register(DropdownAreas)
+admin.site.register(DropdownTipoContrato)
+admin.site.register(DropdownContratoOpcion)
+admin.site.register(DropdownEmpleoTipo)
+admin.site.register(DropdownEmpleoSituacion)
+admin.site.register(DropdownProyecto)
+admin.site.register(DropdownNivelEducativo)
+admin.site.register(DropdownSituacionesEspeciales)
+admin.site.register(DropdownRegimenLaboral)
+admin.site.register(DropdownRegimenAseguramiento)
+admin.site.register(DropdownInstituciones)
+admin.site.register(DropdownCarreras)
+admin.site.register(DropdownCapacitaciones)
+admin.site.register(DropdownEspecializaciones)
+admin.site.register(DropdownSedes)
