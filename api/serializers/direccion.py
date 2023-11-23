@@ -1,6 +1,6 @@
 # serializers/direccion.py
 from rest_framework import serializers
-from .models import Direccion
+from ..models import Direccion
 
 class DireccionSerializer(serializers.ModelSerializer):
     class Meta:

@@ -1,6 +1,6 @@
 # serializers/estudio.py
 from rest_framework import serializers
-from .models import Estudio
+from ..models import Estudio
 
 class EstudioSerializer(serializers.ModelSerializer):
     class Meta:

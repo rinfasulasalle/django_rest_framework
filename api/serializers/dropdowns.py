@@ -1,6 +1,6 @@
 # dropdowns_serializer.py
 from rest_framework import serializers
-from .models import (
+from ..models import (
     DropdownRoles,
     DropdownRolProyecto,
     DropdownAreas,
