@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'coreapi',
     'api',
 ]
 
@@ -81,7 +82,7 @@ DATABASES = {
         'NAME': 'trabajadores_db',
         'USER': 'admin',
         'PASSWORD': 'Laborarpe10',
-        'HOST': '62.72.11.15',  # Si tu base de datos está en el mismo servidor, de lo contrario, proporciona la dirección IP o el nombre de dominio.
+        'HOST': '62.72.11.15',
         'PORT': '3306',  # Puerto predeterminado de MySQL
         'OPTIONS': {
             'charset': 'utf8mb4',
@@ -130,3 +131,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
+}
