@@ -1,0 +1,47 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extension
+*.so
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# VS Code settings
+.vscode/
+
+# PyCharm settings
+.idea/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environment
+venv/
+
+# Ignore local development settings
+local_settings.py
+
+# Django generated files
+*.log
+db.sqlite3
+media/
+
+# Flask generated files
+instance/
+.webassets-cache
+
+# IPython
+profile_default/
+ipython_config.py
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
