@@ -9,6 +9,8 @@ class Usuario(models.Model):
     usuario_apellidos = models.CharField(max_length=100)
     usuario_correo = models.EmailField(unique=True)
     usuario_contrasenia = models.CharField(max_length=100)
+    usuario_sexo = models.CharField(max_length=15, choices=[('Masculino', 'Masculino'),('Femenino', 'Femenino'),('NE', 'No Especificado')])
+    usuario_telefono = models.CharField(max_length=50)
 
     def __str__(self):
-        return f"{self.usuario_nombres} {self.usuario_apellidos}"
+        return f"{self.id}, {self.usuario_nombres} {self.usuario_apellidos}"

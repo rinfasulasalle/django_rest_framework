@@ -3,7 +3,7 @@ from django.db import models
 from .usuario import Usuario
 
 class Trabajador(models.Model):
-    usuario_id = models.CharField(max_length=20, primary_key=True)
+    #usuario_id = models.CharField(max_length=20, primary_key=True)
     trabajador_tipo_documento = models.CharField(max_length=100)
     trabajador_path_documento = models.CharField(max_length=255, default='PATH/noNe')
     trabajador_nacionalidad = models.CharField(max_length=100, default='No Especificado')
@@ -40,7 +40,7 @@ class Trabajador(models.Model):
     trabajador_total_anios_exp = models.DecimalField(max_digits=20, decimal_places=2)
 
     # Cambia el nombre del campo a algo diferente a 'usuario'
-    usuario_relacionado = models.OneToOneField(Usuario, on_delete=models.CASCADE)
+    usuario_relacionado = models.OneToOneField(Usuario, primary_key=True, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"Trabajador: {self.usuario_id}, {self.usuario_relacionado.usuario_nombres} {self.usuario_relacionado.usuario_apellidos}"
+        return f"Trabajador: {self.usuario_relacionado}, {self.usuario_relacionado.usuario_nombres} {self.usuario_relacionado.usuario_apellidos}"

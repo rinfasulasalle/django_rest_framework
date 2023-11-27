@@ -39,5 +39,5 @@ class Estudio(models.Model):
     trabajador = models.ForeignKey(Trabajador, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"Estudio: {self.id} - {self.trabajador.usuario_id}"
+        return f"Estudio: {self.id} - {self.trabajador.id}"
 
