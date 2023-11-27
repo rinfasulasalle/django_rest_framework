@@ -15,7 +15,7 @@ from .dropdowns import (
 
 class Estudio(models.Model):
     id = models.AutoField(primary_key=True)
-    usuario_id = models.CharField(max_length=20)
+    #usuario_id = models.CharField(max_length=20)
     id_estudio_nivel_educativo = models.ForeignKey(DropdownNivelEducativo, on_delete=models.CASCADE)
     id_estudio_situacion_especial = models.ForeignKey(DropdownSituacionesEspeciales, on_delete=models.CASCADE)
     id_regimen_laboral = models.ForeignKey(DropdownRegimenLaboral, on_delete=models.CASCADE)
