@@ -14,5 +14,5 @@ class Direccion(models.Model):
     trabajador = models.ForeignKey(Trabajador, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"Direccion: {self.id} - {self.trabajador.id}"
+        return f"Direccion: {self.id} - {self.trabajador.usuario_relacionado.id}"
 
