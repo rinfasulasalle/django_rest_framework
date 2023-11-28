@@ -22,9 +22,9 @@ class Contrato(models.Model):
     id_empleo_proyecto = models.ForeignKey(DropdownProyecto, on_delete=models.CASCADE)
     id_empleo_proyecto_rol = models.ForeignKey(DropdownRolProyecto, on_delete=models.CASCADE)
     empleo_departamento = models.CharField(max_length=100, null=True, default=None)
-    empleo_cargo = models.CharField(max_length=100, null=True, default=None)
+    empleo_cargo = models.CharField(max_length=100, default=None)
 
-    trabajador = models.ForeignKey(Trabajador, on_delete=models.CASCADE)
+    trabajador_relacionado = models.OneToOneField(Trabajador, on_delete=models.CASCADE)
 
     def __str__(self):
         return f"Contrato: {self.id} - {self.trabajador.usuario_relacionado.id}"

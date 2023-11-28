@@ -1,6 +1,6 @@
 # models/estudio.py
 from django.db import models
-from .trabajador import Trabajador  # Asegúrate de importar el modelo correcto
+#from .trabajador import Trabajador  # Asegúrate de importar el modelo correcto
 from .dropdowns import (
     DropdownNivelEducativo,
     DropdownSituacionesEspeciales,
@@ -36,7 +36,7 @@ class Estudio(models.Model):
         default='XXXXX'
     )
 
-    trabajador = models.ForeignKey(Trabajador, on_delete=models.CASCADE)
+    #trabajador = models.ForeignKey(Trabajador, on_delete=models.CASCADE)
 
     def __str__(self):
         return f"Estudio: {self.id} - {self.trabajador.usuario_relacionado.id}"

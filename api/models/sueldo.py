@@ -1,6 +1,6 @@
 # models/sueldo.py
 from django.db import models
-from .trabajador import Trabajador  # Asegúrate de importar el modelo correcto
+#from .trabajador import Trabajador  # Asegúrate de importar el modelo correcto
 
 class Sueldo(models.Model):
     id = models.AutoField(primary_key=True)
@@ -13,7 +13,7 @@ class Sueldo(models.Model):
     sueldo_mensual = models.DecimalField(max_digits=20, decimal_places=2)
     sueldo_anual = models.DecimalField(max_digits=20, decimal_places=2)
 
-    trabajador = models.ForeignKey(Trabajador, on_delete=models.CASCADE)
+    #trabajador = models.ForeignKey(Trabajador, on_delete=models.CASCADE)
 
     def __str__(self):
         return f"Sueldo: {self.id} - {self.trabajador.usuario_relacionado.id}"
