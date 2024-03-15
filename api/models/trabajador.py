@@ -42,6 +42,7 @@ class Trabajador(models.Model):
     trabajador_record = models.DecimalField(max_digits=20, decimal_places=2, blank=True, null=True)  # Se calculará automáticamente
     trabajador_exp_previa = models.DecimalField(max_digits=20, decimal_places=2)
     trabajador_total_anios_exp = models.DecimalField(max_digits=20, decimal_places=2)
+    activo = models.BooleanField(default=True)
     # --------------------------------------------------------
     def calcular_edad(self):
         if self.trabajador_fecha_nacimiento:
@@ -63,7 +64,7 @@ class Trabajador(models.Model):
 
     def __str__(self):
         return f"Trabajador: {self.usuario_relacionado}, {self.usuario_relacionado.usuario_nombres} {self.usuario_relacionado.usuario_apellidos}"
-# Señal para calcular la edad antes de guardar
+# Señal para calcular campos antes de guardar
 @receiver(pre_save, sender=Trabajador)
 def actualizar_campos(sender, instance, **kwargs):
     instance.calcular_edad()

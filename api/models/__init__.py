@@ -26,3 +26,4 @@ from .contrato import Contrato
 from .cuenta_bancaria import CuentaBancaria
 from .direccion import Direccion
 from .estudio import Estudio
+from .datos_globales import DatosGlobales

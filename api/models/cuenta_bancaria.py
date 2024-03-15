@@ -11,6 +11,7 @@ class CuentaBancaria(models.Model):
     cuenta_bancaria_cts_codigo_cci = models.CharField(max_length=255, null=True, blank=True)
     cuenta_bancaria_cts_codigo = models.CharField(max_length=255, null=True, blank=True)
     cuenta_bancaria_cts_banco = models.CharField(max_length=255, null=True, blank=True)
+    activo = models.BooleanField(default=True)
 
     def __str__(self):
         return f"Cuenta Bancaria: {self.id} - {self.trabajador.usuario_relacionado.id}"
