@@ -56,10 +56,6 @@ MIDDLEWARE = [
 ]
 
 # -----------------------
-CORS_ALLOWED_ORIGINS = [
-    "http://62.72.11.15:3000",
-    "http://62.72.11.15:4000",
-]
 
 CORS_ALLOW_ALL_ORIGINS = True
 
@@ -109,13 +105,26 @@ WSGI_APPLICATION = 'drf.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
+'''DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'trabajadores_db',
         'USER': 'admin',
         'PASSWORD': 'Laborarpe10',
         'HOST': '62.72.11.15',
+        'PORT': '3306',  # Puerto predeterminado de MySQL
+        'OPTIONS': {
+            'charset': 'utf8mb4',
+        },
+    }
+}'''
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'trabajadores_db',
+        'USER': 'root',
+        'PASSWORD': '171222',
+        'HOST': 'localhost',
         'PORT': '3306',  # Puerto predeterminado de MySQL
         'OPTIONS': {
             'charset': 'utf8mb4',

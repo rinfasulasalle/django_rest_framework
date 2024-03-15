@@ -3,120 +3,120 @@ from django.db import models
 
 class DropdownRoles(models.Model):
     id = models.AutoField(primary_key=True)
-    rol = models.CharField(max_length=100, unique=True)
+    name = models.CharField(max_length=100, unique=True)
 
     def __str__(self):
-        return self.rol
+        return self.name
 
 class DropdownRolProyecto(models.Model):
     id = models.AutoField(primary_key=True)
-    rol_titulo = models.CharField(max_length=255, unique=True)
+    name = models.CharField(max_length=255, unique=True)
 
     def __str__(self):
-        return self.rol_titulo
+        return self.name
 
 class DropdownAreas(models.Model):
     id = models.AutoField(primary_key=True)
-    area = models.CharField(max_length=100, unique=True)
+    name = models.CharField(max_length=100, unique=True)
 
     def __str__(self):
-        return self.area
+        return self.name
 
 class DropdownTipoContrato(models.Model):
     id = models.AutoField(primary_key=True)
-    tipo_contrato = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
     dleg = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.tipo_contrato
+        return self.name
 
 class DropdownContratoOpcion(models.Model):
     id = models.AutoField(primary_key=True)
-    opcion_contrato = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.opcion_contrato
+        return self.name
 
 class DropdownEmpleoTipo(models.Model):
     id = models.AutoField(primary_key=True)
-    tipo_empleo = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.tipo_empleo
+        return self.name
 
 class DropdownEmpleoSituacion(models.Model):
     id = models.AutoField(primary_key=True)
-    situacion_empleo = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.situacion_empleo
+        return self.name
 
 class DropdownProyecto(models.Model):
     id = models.AutoField(primary_key=True)
-    proyecto = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.proyecto
+        return self.name
 
 class DropdownNivelEducativo(models.Model):
     id = models.AutoField(primary_key=True)
-    nivel_educativo = models.CharField(max_length=255)
+    name = models.CharField(max_length=255)
 
     def __str__(self):
-        return self.nivel_educativo
+        return self.name
 
 class DropdownSituacionesEspeciales(models.Model):
     id = models.AutoField(primary_key=True)
-    situacion_especial = models.CharField(max_length=255)
+    name = models.CharField(max_length=255)
 
     def __str__(self):
-        return self.situacion_especial
+        return self.name
 
 class DropdownRegimenLaboral(models.Model):
     id = models.AutoField(primary_key=True)
-    regimen_laboral = models.CharField(max_length=255)
+    name = models.CharField(max_length=255)
 
     def __str__(self):
-        return self.regimen_laboral
+        return self.name
 
 class DropdownRegimenAseguramiento(models.Model):
     id = models.AutoField(primary_key=True)
-    regimen_aseguramiento = models.CharField(max_length=255)
+    name = models.CharField(max_length=255)
 
     def __str__(self):
-        return self.regimen_aseguramiento
+        return self.name
 
 class DropdownInstituciones(models.Model):
     id = models.AutoField(primary_key=True)
-    institucion = models.CharField(max_length=255)
+    name = models.CharField(max_length=255)
 
     def __str__(self):
-        return self.institucion
+        return self.name
 
 class DropdownCarreras(models.Model):
     id = models.AutoField(primary_key=True)
-    carrera = models.CharField(max_length=255)
+    name = models.CharField(max_length=255)
 
     def __str__(self):
-        return self.carrera
+        return self.name
 
 class DropdownCapacitaciones(models.Model):
     id = models.AutoField(primary_key=True)
-    capacitacion = models.CharField(max_length=255)
+    name = models.CharField(max_length=255)
 
     def __str__(self):
-        return self.capacitacion
+        return self.name
 
 class DropdownEspecializaciones(models.Model):
     id = models.AutoField(primary_key=True)
-    especializacion = models.CharField(max_length=255)
+    name = models.CharField(max_length=255)
 
     def __str__(self):
-        return self.especializacion
+        return self.name
 
 class DropdownSedes(models.Model):
     id = models.AutoField(primary_key=True)
-    sede = models.CharField(max_length=255)
+    name = models.CharField(max_length=255)
 
     def __str__(self):
-        return self.sede
+        return self.name
