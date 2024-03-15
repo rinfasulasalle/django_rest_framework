@@ -12,10 +12,11 @@ from .dropdowns import (
     DropdownEspecializaciones,
     DropdownSedes,
 )
+from .trabajador import Trabajador
 
 class Estudio(models.Model):
     id = models.AutoField(primary_key=True)
-    #usuario_id = models.CharField(max_length=20)
+    trabajador = models.OneToOneField(Trabajador, on_delete=models.CASCADE, related_name='direccion')
     id_estudio_nivel_educativo = models.ForeignKey(DropdownNivelEducativo, on_delete=models.CASCADE)
     id_estudio_situacion_especial = models.ForeignKey(DropdownSituacionesEspeciales, on_delete=models.CASCADE)
     id_regimen_laboral = models.ForeignKey(DropdownRegimenLaboral, on_delete=models.CASCADE)
@@ -35,8 +36,7 @@ class Estudio(models.Model):
         ],
         default='XXXXX'
     )
-
-    #trabajador = models.ForeignKey(Trabajador, on_delete=models.CASCADE)
+    activo = models.BooleanField(default=True)
 
     def __str__(self):
         return f"Estudio: {self.id} - {self.trabajador.usuario_relacionado.id}"
