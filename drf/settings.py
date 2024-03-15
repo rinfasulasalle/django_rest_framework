@@ -59,6 +59,10 @@ MIDDLEWARE = [
 
 CORS_ALLOW_ALL_ORIGINS = True
 
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8080",  # Reemplaza con las URL permitidas para tu aplicación frontend
+]
+
 CORS_ALLOW_HEADERS = [
     'accept',
     'accept-encoding',

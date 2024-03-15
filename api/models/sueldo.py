@@ -7,7 +7,7 @@ from datetime import datetime
 
 class Sueldo(models.Model):
     id = models.AutoField(primary_key=True)
-    trabajador = models.OneToOneField(Trabajador, on_delete=models.CASCADE, related_name='direccion')
+    trabajador = models.OneToOneField(Trabajador, on_delete=models.CASCADE, related_name='sueldo')
     sueldo_valor_basico = models.DecimalField(max_digits=20, decimal_places=2)
     sueldo_asigfam_porcentaje = models.DecimalField(max_digits=20, decimal_places=2, null=True, blank=True)# 0 o 0.1
     sueldo_asignacion_familiar = models.DecimalField(max_digits=20, decimal_places=2, null=True, blank=True)# = sueldo_asigfam_porcentaje * rmv

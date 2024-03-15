@@ -16,7 +16,7 @@ from .trabajador import Trabajador
 
 class Estudio(models.Model):
     id = models.AutoField(primary_key=True)
-    trabajador = models.OneToOneField(Trabajador, on_delete=models.CASCADE, related_name='direccion')
+    trabajador = models.OneToOneField(Trabajador, on_delete=models.CASCADE, related_name='estudio')
     id_estudio_nivel_educativo = models.ForeignKey(DropdownNivelEducativo, on_delete=models.CASCADE)
     id_estudio_situacion_especial = models.ForeignKey(DropdownSituacionesEspeciales, on_delete=models.CASCADE)
     id_regimen_laboral = models.ForeignKey(DropdownRegimenLaboral, on_delete=models.CASCADE)

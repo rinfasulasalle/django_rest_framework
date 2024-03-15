@@ -13,7 +13,7 @@ from .trabajador import Trabajador  # Asegúrate de importar el modelo correcto
 
 class Contrato(models.Model):
     id = models.AutoField(primary_key=True)
-    trabajador = models.OneToOneField(Trabajador, on_delete=models.CASCADE, related_name='direccion')
+    trabajador = models.OneToOneField(Trabajador, on_delete=models.CASCADE, related_name='contrato')
     id_contrato_tipo = models.ForeignKey(DropdownTipoContrato, on_delete=models.CASCADE)
     id_contrato_opcion = models.ForeignKey(DropdownContratoOpcion, on_delete=models.CASCADE)
     id_empleo_tipo = models.ForeignKey(DropdownEmpleoTipo, on_delete=models.CASCADE)
