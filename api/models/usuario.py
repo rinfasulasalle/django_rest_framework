@@ -15,3 +15,4 @@ class Usuario(models.Model):
 
     def __str__(self):
         return f"{self.id}: {self.usuario_apellido_paterno} {self.usuario_apellido_materno}, {self.usuario_nombres}."
+    
