@@ -6,8 +6,7 @@ from ..models import Trabajador
 class TrabajadorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Trabajador
-        #fields = '__all__'
-        exclude = ['trabajador_edad', 'trabajador_record', 'trabajador_total_anios_exp']
+        fields = '__all__'
     def create(self, validated_data):
         # Establecer automáticamente la fecha de ingreso al sistema
         validated_data['trabajador_fecha_ingreso_sistema'] = timezone.now().date()

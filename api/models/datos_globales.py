@@ -8,4 +8,4 @@ class DatosGlobales(models.Model):
     valor =  models.DecimalField(max_digits=10, decimal_places=2)
 
     def __str__(self) -> str:
-        return f"Variable:{self.variable}, Año:{self.anio}, Valor:{self.valor}"
+        return f"Variable: {self.variable}, Año: {self.anio}, Valor: {self.valor}"

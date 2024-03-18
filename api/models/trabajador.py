@@ -4,6 +4,7 @@ from django.db.models.signals import pre_save
 from django.dispatch import receiver
 from django.utils import timezone
 from datetime import datetime
+from decimal import Decimal
 from .usuario import Usuario
 
 class Trabajador(models.Model):
@@ -56,14 +57,14 @@ class Trabajador(models.Model):
             dias_trabajados = (hoy - fecha_ingreso).days
             self.trabajador_record = dias_trabajados / 365.25
     def calcular_total_exp(self):
-        if self.trabajador_exp_previa:
-            total_exp = self.trabajador_exp_previa
-            if self.trabajador_record:
-                total_exp += self.trabajador_record
-            self.trabajador_total_anios_exp = total_exp
+        total_exp = self.trabajador_exp_previa
+        if self.trabajador_record != 0.0:
+            #total_exp += self.trabajador_record
+            total_exp += Decimal(str(self.trabajador_record))
+        self.trabajador_total_anios_exp = total_exp
 
     def __str__(self):
-        return f"Trabajador: {self.usuario_relacionado}, {self.usuario_relacionado.usuario_nombres} {self.usuario_relacionado.usuario_apellidos}"
+        return f"Trabajador: {self.usuario_relacionado}, {self.usuario_relacionado.usuario_nombres} {self.usuario_relacionado.usuario_apellido_paterno} {self.usuario_relacionado.usuario_apellido_materno}"
 # Señal para calcular campos antes de guardar
 @receiver(pre_save, sender=Trabajador)
 def actualizar_campos(sender, instance, **kwargs):

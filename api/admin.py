@@ -8,6 +8,7 @@ from .models import (
     CuentaBancaria,
     Direccion,
     Estudio,
+    DatosGlobales,
     DropdownRoles,
     DropdownRolProyecto,
     DropdownAreas,
@@ -34,7 +35,7 @@ admin.site.register(Contrato)
 admin.site.register(CuentaBancaria)
 admin.site.register(Direccion)
 admin.site.register(Estudio)
-
+admin.site.register(DatosGlobales)
 # Registra los modelos de "dropdowns"
 admin.site.register(DropdownRoles)
 admin.site.register(DropdownRolProyecto)
