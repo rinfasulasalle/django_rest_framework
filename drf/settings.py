@@ -122,6 +122,7 @@ WSGI_APPLICATION = 'drf.wsgi.application'
         },
     }
 }'''
+# LOCAL
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
