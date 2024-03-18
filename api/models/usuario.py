@@ -14,4 +14,4 @@ class Usuario(models.Model):
     activo = models.BooleanField(default=True)
 
     def __str__(self):
-        return f"{self.id}: {self.usuario_nombres} {self.usuario_apellido_paterno}, {self.usuario_apellido_materno}"
+        return f"{self.id}: {self.usuario_apellido_paterno} {self.usuario_apellido_materno}, {self.usuario_nombres}."

@@ -64,7 +64,7 @@ class Trabajador(models.Model):
         self.trabajador_total_anios_exp = total_exp
 
     def __str__(self):
-        return f"Trabajador: {self.usuario_relacionado}, {self.usuario_relacionado.usuario_nombres} {self.usuario_relacionado.usuario_apellido_paterno} {self.usuario_relacionado.usuario_apellido_materno}"
+        return f"Trabajador: {self.usuario_relacionado} RECORD:{self.trabajador_record}"
 # Señal para calcular campos antes de guardar
 @receiver(pre_save, sender=Trabajador)
 def actualizar_campos(sender, instance, **kwargs):
