@@ -27,4 +27,4 @@ from .cuenta_bancaria import CuentaBancariaSerializer
 from .direccion import DireccionSerializer
 from .estudio import EstudioSerializer
 from .datos_globales import  DatosGlobalesSerializer
-# ... otros serializadores para modelos principales si los tienes
+# ... otros serializadores para modelos principales

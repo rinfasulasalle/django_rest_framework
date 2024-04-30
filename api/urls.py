@@ -24,7 +24,7 @@ from .views import (
     CuentaBancariaViewSet,
     DireccionViewSet,
     EstudioViewSet,
-    DatosGlobalesViewSet
+    DatosGlobalesViewSet,
 )
 
 
@@ -50,13 +50,14 @@ router.register(r'dropdown_especializaciones', DropdownEspecializacionesViewSet)
 router.register(r'dropdown_sedes', DropdownSedesViewSet)
 
 # Rutas para modelos principales
-router.register(r'usuario', UsuarioViewSet)
+router.register(r'u1ario', UsuarioViewSet)
 router.register(r'trabajador', TrabajadorViewSet)
 router.register(r'contrato', ContratoViewSet)
 router.register(r'cuenta_bancaria', CuentaBancariaViewSet)
 router.register(r'direccion', DireccionViewSet)
 router.register(r'estudio', EstudioViewSet)
 router.register(r'datos_globales', DatosGlobalesViewSet)
+
 
 urlpatterns = [
     path('', include(router.urls)),

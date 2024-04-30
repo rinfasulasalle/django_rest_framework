@@ -52,3 +52,5 @@ def validar_y_calcular_campos(sender, instance, **kwargs):
     instance.calcular_monto_bono()
     instance.calcular_sueldo_mensual()
     instance.calcular_sueldo_anual()
+
+

@@ -121,7 +121,7 @@ class DropdownSedesViewSet(viewsets.ModelViewSet):
     queryset = DropdownSedes.objects.all()
     serializer_class = DropdownSedesSerializer
 
-# ... Puede agregar más viewsets de "dropdowns" según sea necesario
+# ...
 
 # Vistas basadas en conjuntos (viewsets) para modelos principales
 class UsuarioViewSet(viewsets.ModelViewSet):
@@ -151,4 +151,4 @@ class EstudioViewSet(viewsets.ModelViewSet):
 class DatosGlobalesViewSet(viewsets.ModelViewSet):
     queryset = DatosGlobales.objects.all()
     serializer_class = DatosGlobalesSerializer
-# ... Puede agregar más viewsets para modelos principales según sea necesario
+# ...
